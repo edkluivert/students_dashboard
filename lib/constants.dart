@@ -4,8 +4,11 @@ const Color primaryColor = Color(0xFF5855D6);
 const  Color sidebarTextColor = Color(0xFF9592A6);
 const Color headlineColor = Color(0xFF333269);
 const menuIndicatorColor = Color(0xFFEE3637);
-
+const bgColor = Color(0xFFC0BEFF);
 const kDefaultPadding = 20.0;
+
+
+const String fontName = 'SFpro';
 
 
 TextStyle listTitleDefaultTextStyle =

@@ -17,9 +17,6 @@ class _MainScreenState extends State<MainScreen>{
   @override
   Widget build(BuildContext context) {
 
-    // It provide us the width and height
-    Size _size = MediaQuery.of(context).size;
-
     return Scaffold(
       backgroundColor: sidebarTextColor,
       body: Responsive(
@@ -33,6 +30,7 @@ class _MainScreenState extends State<MainScreen>{
                   flex: 20,
                   child:  MainSection()
               ),
+
             ],
           ),
           desktop: Row(
@@ -41,8 +39,14 @@ class _MainScreenState extends State<MainScreen>{
                   flex: 4,
                   child:  SideMenu()),
               Expanded(
-                  flex: 20,
+                  flex: 15,
                   child:   MainSection()
+              ),
+              Expanded(
+                  flex: 5,
+                  child:  Container(
+                    color: primaryColor,
+                  )
               ),
             ],
           )),
