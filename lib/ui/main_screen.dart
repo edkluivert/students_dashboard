@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen>{
           tablet: Row(
             children:  [
               const Expanded(
-                  flex: 1,
+                  flex: 3,
                   child:  SideMenu()),
               Expanded(
                   flex: 20,
@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen>{
                   flex: 3,
                   child:  SideMenu()),
               Expanded(
-                  flex: 20,
+                  flex: 15,
                   child:   MainSection()
               ),
             ],
