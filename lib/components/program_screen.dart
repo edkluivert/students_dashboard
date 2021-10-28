@@ -133,7 +133,7 @@ class ProgramScreen extends StatelessWidget{
                              ),
                              child: Center(
                                child: Text(
-                                 "CERTIFICATE UX/UI design",
+                                 "CERTIFICATE UX/UI DESIGN",
                                  style: TextStyle(
                                      fontFamily: fontName,
                                      fontWeight: FontWeight.w600,

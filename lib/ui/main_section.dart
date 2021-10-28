@@ -5,6 +5,8 @@ import 'package:students_dashboard/constants.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'message_screen.dart';
+
 class MainSection extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -33,89 +35,114 @@ class MainSection extends StatelessWidget{
                        ),
                      ],
                    ),
-                    Row(
-                      children: [
-                        Text("|", style: TextStyle(
+                   Row(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       Text("|", style: TextStyle(
                            color : const Color(0xFF8695A0).withOpacity(0.9),
                            fontWeight: FontWeight.w400,
                            fontSize: 40.sp
-                   ),),
-                        SizedBox(width: 50.w,),
-                        WebsafeSvg.asset('assets/icons/message.svg',width: 65.w, height: 65.h),
-                        SizedBox(width: 10.w,),
-                        WebsafeSvg.asset('assets/icons/notification.svg',width: 65.w, height: 65.h),
-                        SizedBox(width: 10.w,),
-                        SizedBox(
-                          width: 95.w,
-                          child: Row(
-                            children: [
-                              Image.asset('assets/images/avatar.png', width: 45.w,height: 45.h,),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children:  [
-                                  Text("Mia V",style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15.sp,
-                                      color: Colors.black54
-                                  ),),
-                                  SizedBox(height: 5.h,),
-                                  Text("Student",style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12.sp,
-                                      color: Colors.black54
-                                  ),),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 10.w,),
-                        WebsafeSvg.asset('assets/icons/bubble.svg',width: 5.w, height: 16.h),
-                        SizedBox(width: 10.w,),
-                      ],
-                    ),
+                       ),),
+                       SizedBox(width: 50.w,),
+                       Padding(
+                         padding: EdgeInsets.only(top: 5.h),
+                         child: WebsafeSvg.asset('assets/icons/message.svg',width: 65.w, height: 65.h),
+                       ),
+                       SizedBox(width: 10.w,),
+                       Padding(
+                         padding: EdgeInsets.only(top: 5.h),
+                         child: WebsafeSvg.asset('assets/icons/notification.svg',width: 65.w, height: 65.h),
+                       ),
+                       SizedBox(width: 10.w,),
+                       SizedBox(
+                         width: 95.w,
+                         child: Row(
+                           children: [
+                             Image.asset('assets/images/avatar.png', width: 40.w,height: 40.h,),
+                             Column(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               children:  [
+                                 Text("Mia V",style: TextStyle(
+                                     fontWeight: FontWeight.bold,
+                                     fontSize: 15.sp,
+                                     color: Colors.black54
+                                 ),),
+                                 SizedBox(height: 5.h,),
+                                 Text("Student",style: TextStyle(
+                                     fontWeight: FontWeight.w400,
+                                     fontSize: 12.sp,
+                                     color: Colors.black54
+                                 ),),
+                               ],
+                             )
+                           ],
+                         ),
+                       ),
+                       SizedBox(width: 10.w,),
+                       WebsafeSvg.asset('assets/icons/bubble.svg',width: 5.w, height: 16.h),
+                       SizedBox(width: 10.w,),
+                     ],
+                   ),
 
                  ],
                ),
              ),
              SizedBox(height:47.h),
-             Padding(
-               padding: EdgeInsets.only(left: 55.w, right: 44.w),
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 children: [
-                   Text(
-                     "Hello, Mia!",
-                     style: TextStyle(
-                         fontFamily: fontName,
-                         fontWeight: FontWeight.w700,
-                         fontSize: 21.sp,
-                         color: headlineColor
-                     ),
-                   ),
-                   SizedBox(
-                     width: 90.w,
-                     height: 17.h,
-                     child: Wrap(
-                       children: [
-                         WebsafeSvg.asset('assets/icons/category.svg', width: 17.w, height: 17.h),
-                         Text(
-                           "Customize",
-                           style: TextStyle(
-                               fontFamily: fontName,
-                               fontWeight: FontWeight.w600,
-                               fontSize: 14.sp,
-                               color: primaryColor
-                           ),
+             Row(
+               children: [
+                 Expanded(
+                   flex: 10,
+                   child: Column(
+                     children: [
+                       Padding(
+                         padding: EdgeInsets.only(left: 55.w, right: 44.w),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Text(
+                               "Hello, Mia!",
+                               style: TextStyle(
+                                   fontFamily: fontName,
+                                   fontWeight: FontWeight.w700,
+                                   fontSize: 21.sp,
+                                   color: headlineColor
+                               ),
+                             ),
+                             SizedBox(
+                               width: 90.w,
+                               height: 17.h,
+                               child: Wrap(
+                                 children: [
+                                   WebsafeSvg.asset('assets/icons/category.svg', width: 17.w, height: 17.h),
+                                   Text(
+                                     "Customize",
+                                     style: TextStyle(
+                                         fontFamily: fontName,
+                                         fontWeight: FontWeight.w600,
+                                         fontSize: 14.sp,
+                                         color: primaryColor
+                                     ),
+                                   ),
+                                 ],
+                               ),
+                             )
+                           ],
                          ),
-                       ],
-                     ),
+                       ),
+                       SizedBox(height:19.h),
+                       const ProgramScreen(),
+                     ],
+                   ),
+                 ),
+                  Expanded(
+                   flex: 4,
+                   child : Padding(
+                     padding: EdgeInsets.only(right: 20.w),
+                     child: const MessageScreen(),
                    )
-                 ],
-               ),
+                 )
+               ],
              ),
-             SizedBox(height:19.h),
-             const ProgramScreen(),
            ],
          ),
        )

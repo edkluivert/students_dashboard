@@ -5,6 +5,7 @@ const  Color sidebarTextColor = Color(0xFF9592A6);
 const Color headlineColor = Color(0xFF333269);
 const menuIndicatorColor = Color(0xFFEE3637);
 const bgColor = Color(0xFFC0BEFF);
+const dHeadLineColor = Color(0xFF021442);
 const kDefaultPadding = 20.0;
 
 

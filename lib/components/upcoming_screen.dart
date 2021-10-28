@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:students_dashboard/components/upcoming_items.dart';
 import 'package:students_dashboard/constants.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -9,7 +10,7 @@ class UpcomingScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 425.w,
+      width: 400.w,
       height: 400.h,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -25,7 +26,7 @@ class UpcomingScreen extends StatelessWidget{
                 child: Text("Upcoming Sessions", style: TextStyle(
                   fontFamily: fontName,
                   fontSize: 16.sp,
-                  color: headlineColor,
+                  color: dHeadLineColor,
                   fontWeight: FontWeight.w500
                 ),),
               ),
@@ -46,14 +47,14 @@ class UpcomingScreen extends StatelessWidget{
                     color: sidebarTextColor,
                     fontWeight: FontWeight.w500
                 ),),
-                SizedBox(height: 31.h,),
+                SizedBox(width: 31.w,),
                 Text("Class", style: TextStyle(
                     fontFamily: fontName,
                     fontSize: 14.sp,
                     color: sidebarTextColor,
                     fontWeight: FontWeight.w500
                 ),),
-                SizedBox(height: 130.h,),
+                SizedBox(width: 180.w,),
                 Text("Time", style: TextStyle(
                     fontFamily: fontName,
                     fontSize: 14.sp,
@@ -64,86 +65,17 @@ class UpcomingScreen extends StatelessWidget{
             ),
           ),
           SizedBox(height: 22.h,),
-          Row(
-            children: [
-              SizedBox(
-                width: 51.w,
-                height: 48.h,
-                child: Text(
-                  "Tomorrow 09 APRIL",
-                  style: TextStyle(
-                    fontFamily: fontName,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 10.sp,
-                      color: sidebarTextColor
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-             SizedBox(
-               width: 313.w,
-               height: 57.h,
-               child: Card(
-                 color: Colors.white,
-                 elevation: 10,
-                 child: Row(
-                   children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 12.w, top: 11.h, bottom: 8.h),
-                        child: SizedBox(
-                          width: 192.w,
-                          child: Column(
-                            children: [
-                               Text(
-                                    "Database and Information Systems",
-                                    style: TextStyle(
-                                      fontFamily: fontName,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12.sp,
-                                        color: headlineColor
-                                    ),
-                                  ),
-                                  Text(
-                                    "Master of Computer Science",
-                                    style:TextStyle(
-                                      fontFamily: fontName,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12.sp,
-                                        color: sidebarTextColor
-                                    ),
-                                  ),
-                            ],
-                          ),
-                        ),
-                      ),
-                     Padding(
-                       padding: EdgeInsets.only(right: 17.w, top: 21.h, bottom: 21.h),
-                       child: Container(
-                         width: 75.w,
-                         height: 15.h,
-                         decoration: BoxDecoration(
-                           color: sidebarTextColor,
-                           borderRadius: BorderRadius.circular(20.r)
-                         ),
-                         child:    Text(
-                           "8:30am-1:00pm",
-                           style: TextStyle(
-                               fontFamily: fontName,
-                               fontWeight: FontWeight.w600,
-                               fontSize: 9.sp,
-                               color: headlineColor
-                           ),
-                         ),
-                       ),
-                     )
-
-                   ],
-                 ),
-               ),
-             )
-
-            ],
-          )
+          UpComingItems(title: "Database and Information Systems" , message: "Master of Computer Science",
+          day: "Tomorrow", time: "09",elevation: 5,
+          ),
+          SizedBox(height: 5.h,),
+          UpComingItems(title: "Database and Information Systems" , message: "Master of Computer Science",
+            day: "Wed", time: "10",elevation: 0,
+          ),
+          SizedBox(height: 5.h,),
+          UpComingItems(title: "Database and Information Systems" , message: "Master of Computer Science",
+            day: "Wed", time: "10",elevation: 0,
+          ),
         ],
       ),
     );

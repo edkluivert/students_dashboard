@@ -4,6 +4,8 @@ import 'package:students_dashboard/constants.dart';
 import 'package:students_dashboard/responsive.dart';
 import 'package:students_dashboard/ui/main_section.dart';
 
+import 'message_screen.dart';
+
 class MainScreen extends StatefulWidget{
   const MainScreen({Key? key}) : super(key: key);
 
@@ -24,7 +26,7 @@ class _MainScreenState extends State<MainScreen>{
           tablet: Row(
             children:  [
               const Expanded(
-                  flex: 5,
+                  flex: 1,
                   child:  SideMenu()),
               Expanded(
                   flex: 20,
@@ -36,17 +38,11 @@ class _MainScreenState extends State<MainScreen>{
           desktop: Row(
             children: [
               const Expanded(
-                  flex: 4,
+                  flex: 3,
                   child:  SideMenu()),
               Expanded(
-                  flex: 15,
+                  flex: 20,
                   child:   MainSection()
-              ),
-              Expanded(
-                  flex: 5,
-                  child:  Container(
-                    color: primaryColor,
-                  )
               ),
             ],
           )),

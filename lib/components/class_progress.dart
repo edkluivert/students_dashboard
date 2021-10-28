@@ -15,7 +15,7 @@ class ClassProgress extends StatelessWidget{
        child: Stack(
          children: [
            Container(
-             height: 304.h,
+             height: 320.h,
              decoration: BoxDecoration(
                  color: Colors.white,
                  borderRadius: BorderRadius.circular(20.r),
@@ -27,17 +27,16 @@ class ClassProgress extends StatelessWidget{
              ),
            ),
            Positioned(
-             left: 247.w,
-             top: 50.h,
-             right: 130.w,
+             left: 220.w,
+             top: 20.h,
+            // right: 130.w,
              child: WebsafeSvg.asset('assets/icons/bookmark.svg',width: 61.w, height: 61.h),
            ),
            Positioned(
               top: 252.h,
-             left: 25.w,
-           //  right: 10.w,
+             left: 17.w,
              child: SizedBox(
-               width: 250.w,
+               width: 265.w,
                height: 150.h,
                child: Card(
                  shape: RoundedRectangleBorder(
@@ -72,7 +71,7 @@ class ClassProgress extends StatelessWidget{
                                   color: sidebarTextColor
                               ),
                             ),
-                            SizedBox(height: 10.h,),
+                            SizedBox(height: 15.h,),
                             SizedBox(
                               child: SizedBox(
                                 width: 100.w,
@@ -115,7 +114,7 @@ class ClassProgress extends StatelessWidget{
                                 ],
                               ),
                             ),
-                            SizedBox(height: 20.h,),
+                            SizedBox(height: 25.h,),
                             Text(
                               "Join Now",
                               style: TextStyle(
